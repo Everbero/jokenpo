@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Jokenpô</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="jokenpo.js"></script>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="text-center">Jogo de Jokenpô</h1>
+      
+      <div class="card text-bg-light">
+        <div class="card-body">
+          <h3 class="card-title text-center">Placar</h3>
+          <div class="d-flex justify-content-around">
+            <div class="card p-3">
+                <h3 class="card-title text-center">Você</h3>
+            <p class="card-text">Pontos: <span id="placar-jogador">0</span></p>
+            </div>
+            <div class="card p-3">
+                <h3 class="card-title text-center">Bot</h3>
+                <p class="card-text">Pontos: <span id="placar-computador">0</span></p>
+            </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="card text-bg-light mt-4">
+        <div class="card-body text-center">
+          <h3 class="card-title text-center">Escolha uma opção</h3>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary opcao" data-escolha="pedra">✊</button>
+            <button type="button" class="btn btn-primary opcao" data-escolha="papel">✋</button>
+            <button type="button" class="btn btn-primary opcao" data-escolha="tesoura">✌️</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card text-bg-light mt-4">
+        <div class="card-body text-center">
+          <h3 class="card-title text-center">Resultado da Rodada</h3>
+          <p id="mensagem" class="card-text">Escolha uma opção.</p>
+          <div id="resultado" class="card-text"></div>
+          <p id="escolha-computador" class="card-text"></p>
+        </div>
+      </div>
+
+      <button id="reiniciar" class="btn btn-danger mt-4">Reiniciar Jogo</button>
+    </div>
+  </body>
+</html>
